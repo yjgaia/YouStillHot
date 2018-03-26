@@ -1,5 +1,7 @@
 {
 	"urls": [
-		"https://us-central1-i-am-skeleton-196313.cloudfunctions.net/createSkeleton"
+		"{{URL 1}}",
+		"{{URL 2}}",
+		"{{URL 3}}"
 	]
 }
