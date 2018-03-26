@@ -1,7 +1,7 @@
 # You Still Hot
 AWS Lambda 및 Google Cloud Functions의 Cold Start 문제를 해결하기 위한 스케줄러 애플리케이션
 
-5분에 한번씩 요청을 보내 Warm Start를 유지합니다.
+1분에 한번씩 요청을 보내 Warm Start를 유지합니다.
 
 ## 설치하기
 ```

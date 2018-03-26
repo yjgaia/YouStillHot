@@ -7,8 +7,8 @@ let config = JSON.parse(READ_FILE({
 
 let urls = config.urls;
 
-// 3분에 한번씩 요청 발송
-INTERVAL(3 * 60, RAR(() => {
+// 1분에 한번씩 요청 발송
+INTERVAL(60, RAR(() => {
 	EACH(urls, (url) => {
 		GET(url);
 	});
