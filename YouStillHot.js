@@ -10,7 +10,13 @@ let urls = config.urls;
 // 1분에 한번씩 요청 발송
 INTERVAL(60, RAR(() => {
 	EACH(urls, (url) => {
-		GET(url);
+		POST({
+			url : url,
+			headers : {
+				'Content-Type' : 'application/json'
+			},
+			paramStr : '{"__DONT_COLD_START":true}'
+		});
 	});
 }));
 
