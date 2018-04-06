@@ -1,15 +1,14 @@
 require('uppercase-core');
 
-let config = JSON.parse(READ_FILE({
-	path : 'config.json',
-	isSync : true
-}));
+// 1분에 한번씩 요청 발송
+INTERVAL(60, RAR(() => {
+	
+	let config = JSON.parse(READ_FILE({
+		path : 'config.json',
+		isSync : true
+	}));
 
-let urls = config.urls;
-
-// 2분에 한번씩 요청 발송
-INTERVAL(2 * 60, RAR(() => {
-	EACH(urls, (url) => {
+	EACH(config.urls, (url) => {
 		POST({
 			url : url,
 			headers : {
